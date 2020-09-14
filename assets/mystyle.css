@@ -1,0 +1,259 @@
+   
+body,nav{
+    background: #19182d;
+    font-family: viga;
+} 
+
+.navbar-brand, .nav-link{
+    color: white !important;
+}
+
+.nav-link{
+    margin-left: 22px;
+}
+
+.baner{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    color: white;
+    margin-top: 22%;
+}
+
+.foto img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+ul{
+    margin-left: -42px;
+}
+
+ul li a{
+    color: white;
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+    padding: 5px;
+}
+
+.about{
+    background-color: #03011d;
+    padding: 30px;
+    margin-top: 23%;
+    color: white;
+}
+
+.judul{
+    margin-top: 2%;
+}
+
+.flex-about{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.text-about{
+    width: 40%;
+}
+
+.project{
+    background-color: #f7f3f3;
+    padding: 30px;
+    background-color: yellow;
+}
+
+.container-project{
+    padding: 10px;
+    
+}
+
+.flex-project{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+.project-content{
+    width: 35%;
+}
+
+.artikel{
+    text-align: justify;
+    background-color:  #19182d;
+    color: white;
+    font-size: 0.8em;
+    padding: 20px;
+    height: 160px;
+    margin-top: 20%;
+    margin-right: -20%;
+    position: relative;
+}
+
+.img-project{
+    width: 300px;
+}
+
+.flex-project-2{
+    display: flex;
+    justify-content: space-evenly;    
+    margin-top: -20px;
+}
+
+.about-2{
+    order: 2;
+    margin-left: -35%;
+    margin-top: 12%;
+}
+
+
+.img-project-2{
+    height: 300px;
+    margin-left: -16%;
+}
+/* Desktop */
+@media only screen and (min-width: 992px) {
+     
+
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid yellow;
+        width: 50%;
+        margin: auto;
+        margin-bottom: -3px;
+    }
+
+    header{
+        margin-top: 15%;
+        height: 100%;
+    }
+
+
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 578px) 
+{
+  
+    header{
+        font-size: 0.8em;
+        line-height: 12px;
+    }
+    
+    .foto img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    span{
+        font-size: 0.7em;
+    }
+
+    h2,h4{
+        font-size: 0.9em;
+    }
+
+    small{
+        font-size: 0.7em;
+    }
+
+    ul li{
+        font-size: 0.7em;
+    }
+
+    .flex-about{
+        justify-content: space-evenly;
+    }
+
+    .text-about{
+        width: 35%;
+        font-size: 0.4em;
+    }
+
+    .project{
+        font-size: 0.8em;
+    }
+
+    .project-content{
+        width: 40%;
+    }
+
+    .project-about{
+        font-size: 0.6em;
+        line-height: 5px;
+    }
+
+    .artikel{
+        font-size: 0.6em;
+        width: 70%;
+        height: 100px;
+        margin-top: 10%;
+    }
+
+    .flex-project .img{
+        width: 50%;
+        margin-left: -60px;
+        margin-top: 40%;
+    }
+
+    
+    .flex-project-2{
+        margin-top: -50px;
+    }
+
+    .img-project{
+        width: 100px;
+    }
+
+    .img-project-2{
+        margin-left: -20px;
+        width: 160px;
+        height: 100px;
+        margin-top: 43%;
+        order: 2;
+    }
+
+    .about-2{
+        margin-right: -30%;
+        margin-left: 2%;
+        width: 90%;
+    }
+
+    .img-2{
+        width: 130px;
+    }
+
+    .project-about{
+        font-size: 0.6em;
+        line-height: 3px;
+    }
+
+    #service{
+        font-size: 0.8em;
+    }
+
+    #contact{
+        font-size: 0.4em;
+    }
+
+    .judul-kontak{
+        font-size: 1.4em;
+    }
+
+    .btn-social{
+        font-size: 0.2em;
+    }
+
+    .wa{
+        font-size: 0.9em;
+    }
+
+}
