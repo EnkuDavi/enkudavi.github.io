@@ -143,9 +143,15 @@ ul li{
 {
   
     header{
+        height: 150px;
         font-size: 0.8em;
         line-height: 12px;
     }
+   
+   .baner{
+        margin-top: 45%;
+    }
+
     
     .foto img{
         width: 80px;
@@ -174,8 +180,8 @@ ul li{
     }
 
     .text-about{
-        width: 35%;
-        font-size: 0.4em;
+        width: 46%;
+        font-size: 0.5em;
     }
 
     .project{
@@ -249,11 +255,15 @@ ul li{
     }
 
     .btn-social{
-        font-size: 0.2em;
+        font-size: 0.4em;
+    }
+   
+   .lokal{
+        font-size: 1em;
     }
 
     .wa{
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
 }
