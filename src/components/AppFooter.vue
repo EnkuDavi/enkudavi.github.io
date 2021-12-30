@@ -38,9 +38,9 @@
 						target="__blank"
 						class="hover:underline"
 					>
-						Vue.js & TailwindCSS Portfolio
+						Eko Purnomo Portfolio Design By
 					</a>
-					.
+					
 					<a
 						href="https://stoman.me"
 						target="__blank"
@@ -64,31 +64,25 @@ export default {
 					id: 1,
 					name: 'GitHub',
 					icon: 'github',
-					url: 'https://github.com/realstoman',
+					url: 'https://github.com/EnkuDavi',
 				},
 				{
 					id: 2,
-					name: 'Twitter',
-					icon: 'twitter',
-					url: 'https://twitter.com/realstoman',
+					name: 'Linkedin',
+					icon: 'linkedin',
+					url: 'https://www.linkedin.com/in/eko-purnomo-1395291a0/',
 				},
 				{
 					id: 3,
 					name: 'Medium',
 					icon: 'book',
-					url: 'https://stoman.medium.com',
+					url: 'https://mazeko.id',
 				},
 				{
 					id: 4,
 					name: 'Instagram',
 					icon: 'instagram',
-					url: 'https://instagram.com/realstoman',
-				},
-				{
-					id: 5,
-					name: 'Behance',
-					icon: 'feather',
-					url: 'https://behance.net/realstoman',
+					url: 'https://www.instagram.com/enkudavi_/',
 				},
 			],
 		};
