@@ -13,12 +13,12 @@
 			<p
 				class="mt-4 text-2xml sm:text-3xl xl:text-4xl text-center sm:text-left font-semibold leading-none text-gray-400"
 			>
-				A Full-Stack Web & Mobile Developer 
+				A Full-Stack Developer 
 			</p>
 			<div class="flex justify-center sm:block">
 				<a
-					download="Stoman-Resume.pdf"
-					href="/files/Stoman-Resume.pdf"
+					download="CV-Eko_Purnomo.pdf"
+					href="/files/CV-Eko_Purnomo.pdf"
 					class="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white"
 					aria-label="Download Resume"
 				>
@@ -62,7 +62,7 @@ export default {
 	},
 	mounted() {
 		feather.replace();
-		this.theme = localStorage.getItem('theme') || 'light';
+		this.theme = localStorage.getItem('theme') || 'dark';
 	},
 	updated() {
 		feather.replace();
