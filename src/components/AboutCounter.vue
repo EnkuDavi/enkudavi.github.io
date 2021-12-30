@@ -9,7 +9,7 @@
 				<counter
 					ref="counter"
 					:startAmount="0"
-					:endAmount="12"
+					:endAmount="2"
 					:duration="1"
 					:autoinit="true"
 					@finished="alert(`Counting finished!`)"
@@ -27,16 +27,16 @@
 				<counter
 					ref="counter"
 					:startAmount="0"
-					:endAmount="20"
+					:endAmount="40"
 					:duration="1"
-					suffix="k+"
+					suffix="+"
 					:autoinit="true"
 					@finished="alert(`Counting finished!`)"
 					class="text-4xl font-bold text-secondary-dark dark:text-secondary-light mb-2"
 				/>
 				<span
 					class="block text-md text-ternary-dark dark:text-ternary-light"
-					>Stars on GitHub</span
+					>Projects Done</span
 				>
 			</div>
 
