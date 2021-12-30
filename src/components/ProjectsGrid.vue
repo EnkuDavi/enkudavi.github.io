@@ -117,7 +117,7 @@ export default {
 					id: 1,
 					title: 'Portal Monitoring System for Agent',
 					category: 'Web Application',
-					img: require('@/assets/images/web-project-2.jpg'),
+					img: require('@/assets/images/portal-2.jpg'),
 				},
 				{
 					id: 2,
@@ -129,7 +129,7 @@ export default {
 					id: 3,
 					title: 'Mazeko Blog',
 					category: 'Blog',
-					img: require('@/assets/images/ui-project-1.jpg'),
+					img: require('@/assets/images/mock-mazeko-1.jpg'),
 				},
 				{
 					id: 4,
@@ -139,15 +139,15 @@ export default {
 				},
 				{
 					id: 5,
-					title: 'React Social App',
-					category: 'Mobile Application',
-					img: require('@/assets/images/mobile-project-1.jpg'),
+					title: 'SPP Payment App',
+					category: 'Web Application',
+					img: require('@/assets/images/mock-spp-2.jpg'),
 				},
 				{
 					id: 6,
-					title: 'Apple Design System',
+					title: 'Hotel Information Management System',
 					category: 'Web Application',
-					img: require('@/assets/images/web-project-1.jpg'),
+					img: require('@/assets/images/mock-gn-1.jpg'),
 				},
 			],
 		};

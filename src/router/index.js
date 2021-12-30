@@ -19,7 +19,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/About.vue'),
 		meta: {
-			title: 'Stoman - About',
+			title: 'Mazeko - About',
 		},
 	},
 	{
@@ -31,7 +31,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Projects.vue'),
 		meta: {
-			title: 'Stoman - Projects',
+			title: 'Mazeko - Projects',
 		},
 	},
 	{
@@ -45,7 +45,7 @@ const routes = [
 				/* webpackChunkName: "projects" */ '../views/SingleProject.vue'
 			),
 		meta: {
-			title: 'Stoman - Single Project',
+			title: 'Mazeko - Single Project',
 		},
 	},
 	{
@@ -57,7 +57,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Contact.vue'),
 		meta: {
-			title: 'Stoman - Contact',
+			title: 'Mazeko - Contact',
 		},
 	},
 ];
