@@ -8,7 +8,7 @@
 			<h1
 				class="text-3xl sm:text-4xl xl:text-5xl text-center sm:text-left font-semibold text-ternary-dark dark:text-primary-light uppercase"
 			>
-				Hi, Iam <br> Eko Purnomo
+				Hi, I'am <br> Eko Purnomo
 			</h1>
 			<p
 				class="mt-4 text-2xml sm:text-3xl xl:text-4xl text-center sm:text-left font-semibold leading-none text-gray-400"
