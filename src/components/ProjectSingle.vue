@@ -1,7 +1,7 @@
 <template>
 	<!-- Single project -->
 	<router-link
-		to="/projects/single-project"
+		v-bind:to="'/projects/single-project/'+project.id"
 		class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark"
 		aria-label="Single Project"
 	>
