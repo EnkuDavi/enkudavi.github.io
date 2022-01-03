@@ -13,7 +13,7 @@
 			<p
 				class="mt-4 text-2xml sm:text-3xl xl:text-4xl text-center sm:text-left font-semibold leading-none text-gray-400"
 			>
-				A Full-Stack Developer 
+				A Software Engineer
 			</p>
 			<div class="flex justify-center sm:block">
 				<a
