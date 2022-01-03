@@ -21,6 +21,7 @@
 <script>
 import AppBanner from '@/components/AppBanner';
 import ProjectsGrid from '../components/ProjectsGrid.vue';
+// import ProjectList from '../components/ProjectList.vue';
 
 export default {
 	name: 'Home',

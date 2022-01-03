@@ -94,6 +94,8 @@
 				:key="project.id"
 				:project="project"
 			/>
+
+			<!-- <ProjectSingle/> -->
 		</div>
 	</section>
 </template>
@@ -102,6 +104,7 @@
 import feather from 'feather-icons';
 import ProjectsFilter from './ProjectsFilter.vue';
 import ProjectSingle from './ProjectSingle.vue';
+import axios from 'axios'
 
 export default {
 	components: { ProjectSingle, ProjectsFilter },
@@ -112,44 +115,45 @@ export default {
 				'Some of the projects I have successfully completed',
 			selectedProject: '',
 			searchProject: '',
-			projects: [
-				{
-					id: 1,
-					title: 'Portal Monitoring System for Agent',
-					category: 'Web Application',
-					img: require('@/assets/images/portal-2.jpg'),
-				},
-				{
-					id: 2,
-					title: 'Real Time Monitoring Active Call',
-					category: 'Web Application',
-					img: require('@/assets/images/mobile-project-2.jpg'),
-				},
-				{
-					id: 3,
-					title: 'Mazeko Blog',
-					category: 'Blog',
-					img: require('@/assets/images/mock-mazeko-1.jpg'),
-				},
-				{
-					id: 4,
-					title: 'Toko Online Sepatu',
-					category: 'Mobile Application',
-					img: require('@/assets/images/ui-project-2.jpg'),
-				},
-				{
-					id: 5,
-					title: 'SPP Payment App',
-					category: 'Web Application',
-					img: require('@/assets/images/mock-spp-2.jpg'),
-				},
-				{
-					id: 6,
-					title: 'Hotel Information Management System',
-					category: 'Web Application',
-					img: require('@/assets/images/mock-gn-1.jpg'),
-				},
-			],
+			projects: []
+			// projects: [
+			// 	{
+			// 		id: 1,
+			// 		title: 'Portal Monitoring System for Agent',
+			// 		category: 'Web Application',
+			// 		img: require('@/assets/images/portal-2.jpg'),
+			// 	},
+			// 	{
+			// 		id: 2,
+			// 		title: 'Real Time Monitoring Active Call',
+			// 		category: 'Web Application',
+			// 		img: require('@/assets/images/mobile-project-2.jpg'),
+			// 	},
+			// 	{
+			// 		id: 3,
+			// 		title: 'Mazeko Blog',
+			// 		category: 'Blog',
+			// 		img: require('@/assets/images/mock-mazeko-1.jpg'),
+			// 	},
+			// 	{
+			// 		id: 4,
+			// 		title: 'Toko Online Sepatu',
+			// 		category: 'Mobile Application',
+			// 		img: require('@/assets/images/ui-project-2.jpg'),
+			// 	},
+			// 	{
+			// 		id: 5,
+			// 		title: 'SPP Payment App',
+			// 		category: 'Web Application',
+			// 		img: require('@/assets/images/mock-spp-2.jpg'),
+			// 	},
+			// 	{
+			// 		id: 6,
+			// 		title: 'Hotel Information Management System',
+			// 		category: 'Web Application',
+			// 		img: require('@/assets/images/mock-gn-1.jpg'),
+			// 	},
+			// ],
 		};
 	},
 	computed: {
@@ -164,6 +168,11 @@ export default {
 		},
 	},
 	methods: {
+		getProject(){
+            axios.get('http://mazeko-api.herokuapp.com/api/project').then(response => {
+               this.projects = response.data.data; 
+            }) 
+        },
 		// Filter projects by category
 		filterProjectsByCategory() {
 			return this.projects.filter((item) => {
@@ -181,6 +190,7 @@ export default {
 	},
 	mounted() {
 		feather.replace();
+		this.getProject();
 	},
 };
 </script>
