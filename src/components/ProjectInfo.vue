@@ -12,20 +12,14 @@
 				</p>
 				<ul class="leading-loose">
 					<li
-						v-for="info in projectInfo.companyInfos"
-						:key="info"
 						class="text-ternary-dark dark:text-ternary-light"
 					>
-						<span>{{ info.title }}: </span>
+						<span>{{ projectInfo.companyInfos }} </span>
 						<a
 							href="#"
-							:class="
-								info.title == 'Website' || info.title == 'Phone'
-									? 'hover:underline cursor-pointer'
-									: ''
-							"
+							
 							aria-label="Project Website and Phone"
-							>{{ info.details }}</a
+							></a
 						>
 					</li>
 				</ul>
@@ -48,10 +42,10 @@
 				<p
 					class="text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2"
 				>
-					{{ projectInfo.technologies[0].title }}
+					Technology
 				</p>
 				<p class="text-primary-dark dark:text-ternary-light">
-					{{ projectInfo.technologies[0].techs.join(', ') }}
+					{{ projectInfo.technologies }}
 				</p>
 			</div>
 
@@ -87,11 +81,9 @@
 				{{ projectInfo.projectDetailsHeading }}
 			</p>
 			<p
-				v-for="projectDetail in projectInfo.projectDetails"
-				:key="projectDetail.id"
 				class="mb-5 text-lg text-ternary-dark dark:text-ternary-light"
 			>
-				{{ projectDetail.details }}
+				{{ projectInfo.projectDetails }}
 			</p>
 		</div>
 	</div>

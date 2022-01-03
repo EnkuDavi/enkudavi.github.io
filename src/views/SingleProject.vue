@@ -10,7 +10,7 @@
 		<ProjectInfo :projectInfo="projectInfo" />
 
 		<!-- Project related projects -->
-		<ProjectRelatedProjects :relatedProject="relatedProject" />
+		<!-- <ProjectRelatedProjects :relatedProject="relatedProject" /> -->
 	</div>
 </template>
 
@@ -19,7 +19,8 @@ import feather from 'feather-icons';
 import ProjectHeader from '../components/ProjectHeader.vue';
 import ProjectGallery from '../components/ProjectGallery.vue';
 import ProjectInfo from '../components/ProjectInfo.vue';
-import ProjectRelatedProjects from '../components/ProjectRelatedProjects.vue';
+// import ProjectRelatedProjects from '../components/ProjectRelatedProjects.vue';
+import axios from 'axios';
 
 export default {
 	name: 'Projects',
@@ -27,95 +28,30 @@ export default {
 		ProjectHeader,
 		ProjectGallery,
 		ProjectInfo,
-		ProjectRelatedProjects,
+		// ProjectRelatedProjects,
 	},
 	data: () => {
 		return {
+			id: 0,
 			singleProjectHeader: {
-				singleProjectTitle: 'Project Management UI',
-				singleProjectDate: 'Jul 26, 2021',
-				singleProjectTag: 'UI / Frontend',
+				singleProjectTitle: '',
+				singleProjectDate: 'Dec 01, 2022',
+				singleProjectTag: '',
 			},
-			projectImages: [
-				{
-					id: 1,
-					title: 'Kabul Project Management UI',
-					img: require('@/assets/images/ui-project-1.jpg'),
-				},
-				{
-					id: 2,
-					title: 'Kabul Project Management UI',
-					img: require('@/assets/images/web-project-2.jpg'),
-				},
-				{
-					id: 3,
-					title: 'Kabul Project Management UI',
-					img: require('@/assets/images/mobile-project-2.jpg'),
-				},
-			],
+			projectImages: {
+				first: '',
+				second: '',
+				third: ''
+			},
 			projectInfo: {
 				clientHeading: 'About Client',
-				companyInfos: [
-					{
-						id: 1,
-						title: 'Name',
-						details: 'Company Ltd',
-					},
-					{
-						id: 2,
-						title: 'Services',
-						details: 'UI Design & Frontend Development',
-					},
-					{
-						id: 3,
-						title: 'Website',
-						details: 'https://company.com',
-					},
-					{
-						id: 4,
-						title: 'Phone',
-						details: '555 8888 888',
-					},
-				],
+				companyInfos: '',
 				objectivesHeading: 'Objective',
 				objectivesDetails:
 					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
-				technologies: [
-					{
-						title: 'Tools & Technologies',
-						techs: [
-							'HTML',
-							'CSS',
-							'JavaScript',
-							'Vue.js',
-							'TailwindCSS',
-							'AdobeXD',
-						],
-					},
-				],
+				technologies: '',
 				projectDetailsHeading: 'Challenge',
-				projectDetails: [
-					{
-						id: 1,
-						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-					},
-					{
-						id: 2,
-						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-					},
-					{
-						id: 3,
-						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-					},
-					{
-						id: 4,
-						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-					},
-				],
+				projectDetails: '',
 				socialSharingsHeading: 'Share This',
 				socialSharings: [
 					{
@@ -179,11 +115,35 @@ export default {
 	},
 	mounted() {
 		feather.replace();
+		this.getDetailProject();
 	},
 	updated() {
 		feather.replace();
 	},
-	methods: {},
+	methods: {
+		getDetailProject(){
+			axios.get('https://mazeko-api.herokuapp.com/api/project',{
+				params:{
+					id: this.$route.params.id
+				}
+			}).then(response => (
+				this.id = this.$route.params.id - 1,
+				this.setData(response.data.data[this.id])
+				// this.setData(response.data.data)
+			))
+		},
+
+		setData(data){
+			this.singleProjectHeader.singleProjectTitle = data.project_name,
+			this.singleProjectHeader.singleProjectTag = data.category,
+			this.projectInfo.companyInfos = data.client,
+			this.projectInfo.technologies = data.tools,
+			this.projectInfo.projectDetails = data.description
+			this.projectImages.first = data.image,
+			this.projectImages.second = data.second_image,
+			this.projectImages.third = data.third_image
+		}
+	},
 };
 </script>
 
