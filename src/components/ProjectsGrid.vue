@@ -169,7 +169,7 @@ export default {
 	},
 	methods: {
 		getProject(){
-            axios.get('http://mazeko-api.herokuapp.com/api/project').then(response => {
+            axios.get('https://mazeko-api.herokuapp.com/api/project').then(response => {
                this.projects = response.data.data; 
             }) 
         },
