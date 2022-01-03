@@ -27,7 +27,7 @@
 				<counter
 					ref="counter"
 					:startAmount="0"
-					:endAmount="40"
+					:endAmount="10"
 					:duration="1"
 					suffix="+"
 					:autoinit="true"
