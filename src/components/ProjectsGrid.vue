@@ -131,7 +131,7 @@ export default {
 	},
 	methods: {
 		getProject(){
-            axios.get('https://backend-portfolio-rose.vercel.app/').then(response => {
+            axios.get('https://backend-portfolio-rose.vercel.app/project').then(response => {
                this.projects = response.data.data; 
             }) 
         },
