@@ -122,7 +122,7 @@ export default {
 	},
 	methods: {
 		getDetailProject(){
-			axios.get('https://mazeko-api.herokuapp.com/project/' + this.$route.params.id,{
+			axios.get('https://backend-portfolio-rose.vercel.app/project/' + this.$route.params.id,{
 			}).then(response => (
 				this.id = this.$route.params.id - 1,
 				this.setData(response.data.data[this.id])
