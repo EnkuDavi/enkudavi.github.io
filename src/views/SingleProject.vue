@@ -124,9 +124,7 @@ export default {
 		getDetailProject(){
 			axios.get('https://backend-portfolio-rose.vercel.app/project/' + this.$route.params.id,{
 			}).then(response => (
-				this.id = this.$route.params.id - 1,
-				this.setData(response.data.data[this.id])
-				// this.setData(response.data.data)
+				this.setData(response.data.data[0])
 			))
 		},
 
