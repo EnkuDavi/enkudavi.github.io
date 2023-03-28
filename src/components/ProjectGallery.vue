@@ -20,7 +20,7 @@
 			/>
 		</div>
 		
-		<div v-if="projectImages.second != ''"
+		<div v-if="projectImages.third != ''"
 			class="mb-10 sm:mb-0"
 		>
 			<img
